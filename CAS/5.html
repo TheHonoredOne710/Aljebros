@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geometry Formulas</title>
+  <style>
+    /* CSS for accordion */
+    .accordion {
+      background-color: #f1f1f1;
+      color: #333;
+      cursor: pointer;
+      padding: 10px;
+      text-align: left;
+      border: none;
+      outline: none;
+      transition: 0.4s;
+      margin-bottom: 5px;
+    }
+
+    .accordion:hover {
+      background-color: #ddd;
+    }
+
+    .panel {
+      display: none;
+      padding: 0 10px;
+      background-color: #f9f9f9;
+      border-left: 3px solid #ccc;
+      margin-bottom: 10px;
+    }
+
+    nav {
+      margin-bottom: 20px;
+      background-color: #e3f2fd;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #007BFF;
+    }
+
+    svg {
+      display: block;
+      margin: 10px auto;
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="algebra1.html">Algebra 1</a>
+    <a href="algebra2.html">Algebra 2</a>
+    <a href="geometry.html">Geometry</a>
+  </nav>
+
+  <h1>Geometry Formulas</h1>
+
+  <!-- Section: Area of a Triangle -->
+  <button class="accordion">Area of a Triangle</button>
+  <div class="panel">
+    <p>The area of a triangle is given by:</p>
+    <p><strong>Formula:</strong> <em>A = 1/2 × base × height</em></p>
+    <p><strong>Example:</strong> If the base is 10 units and the height is 5 units:</p>
+    <p><strong>A = 1/2 × 10 × 5 = 25 square units</strong></p>
+    <p>Visual representation:</p>
+    <svg height="200" width="200">
+      <polygon points="10,190 190,190 100,50" style="fill:lightblue;stroke:black;stroke-width:2" />
+      <text x="100" y="200" font-size="12" text-anchor="middle">Base</text>
+      <text x="50" y="120" font-size="12" text-anchor="middle" transform="rotate(-90,50,120)">Height</text>
+    </svg>
+  </div>
+
+  <!-- Remaining accordion sections here, unchanged -->
+  
+  <script>
+    // JavaScript for accordion functionality
+    const accordions = document.querySelectorAll('.accordion');
+    accordions.forEach(button => {
+      button.addEventListener('click', () => {
+        const panel = button.nextElementSibling;
+        panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+  </script>
+</body>
+</html>

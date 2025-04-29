@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Algebra 2 Formulas</title>
+  <style>
+    /* CSS for accordion */
+    .accordion {
+      background-color: #f1f1f1;
+      color: #333;
+      cursor: pointer;
+      padding: 10px;
+      text-align: left;
+      border: none;
+      outline: none;
+      transition: 0.4s;
+      margin-bottom: 5px;
+    }
+
+    .accordion:hover {
+      background-color: #ddd;
+    }
+
+    .panel {
+      display: none;
+      padding: 0 10px;
+      background-color: #f9f9f9;
+      border-left: 3px solid #ccc;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Algebra 2 Formulas</h1>
+
+  <!-- Section: Compound Interest -->
+  <button class="accordion">Compound Interest</button>
+  <div class="panel">
+    <p>Compound interest is calculated based on the principal amount and the accumulated interest from previous periods. The formulas are:</p>
+    <ul>
+      <li><strong>Annual Compounding:</strong> <em>A = P(1 + r)^t</em></li>
+      <li><strong>Periodic Compounding:</strong> <em>A = P(1 + r/n)^(nt)</em></li>
+      <li><strong>Continuous Compounding:</strong> <em>A = Pe^(rt)</em></li>
+    </ul>
+    <p>Where:</p>
+    <ul>
+      <li><strong>A:</strong> Final amount</li>
+      <li><strong>P:</strong> Principal (initial amount)</li>
+      <li><strong>r:</strong> Annual interest rate (decimal)</li>
+      <li><strong>t:</strong> Time (years)</li>
+      <li><strong>n:</strong> Number of compounding periods per year</li>
+      <li><strong>e:</strong> Euler's number (~2.718)</li>
+    </ul>
+    <p><strong>Example:</strong> If <em>P = $1,000</em>, <em>r = 0.05</em>, <em>t = 3</em>, and <em>n = 4</em> (quarterly), the amount is:</p>
+    <p><strong>A = 1000(1 + 0.05/4)^(4×3) = 1000(1.0125)^12 ≈ $1157.63</strong></p>
+  </div>
+
+  <!-- Section: Logarithmic Properties -->
+  <button class="accordion">Logarithmic Properties</button>
+  <div class="panel">
+    <p>Logarithms are the inverses of exponents. Key properties include:</p>
+    <ul>
+      <li><strong>Product Rule:</strong> <em>logₐ(xy) = logₐ(x) + logₐ(y)</em></li>
+      <li><strong>Quotient Rule:</strong> <em>logₐ(x/y) = logₐ(x) − logₐ(y)</em></li>
+      <li><strong>Power Rule:</strong> <em>logₐ(xⁿ) = n × logₐ(x)</em></li>
+      <li><strong>Change of Base Formula:</strong> <em>logₐ(x) = log(x)/log(a)</em></li>
+    </ul>
+    <p><strong>Example:</strong> Simplify <em>log₂(32):</em></p>
+    <p><strong>log₂(32) = log₂(2⁵) = 5 × log₂(2) = 5 × 1 = 5</strong></p>
+  </div>
+
+  <!-- Section: Exponential Growth and Decay -->
+  <button class="accordion">Exponential Growth and Decay</button>
+  <div class="panel">
+    <p>Exponential growth and decay are modeled using:</p>
+    <ul>
+      <li><strong>Growth:</strong> <em>y = y₀e^(kt)</em></li>
+      <li><strong>Decay:</strong> <em>y = y₀e^(-kt)</em></li>
+    </ul>
+    <p>Where:</p>
+    <ul>
+      <li><strong>y₀:</strong> Initial amount</li>
+      <li><strong>k:</strong> Growth or decay rate</li>
+      <li><strong>t:</strong> Time</li>
+      <li><strong>e:</strong> Euler's number (~2.718)</li>
+    </ul>
+    <p><strong>Example:</strong> If a population of 100 grows at a rate of 5% annually, its size after 3 years is:</p>
+    <p><strong>y = 100e^(0.05×3) ≈ 116.18</strong></p>
+  </div>
+
+  <!-- Section: Matrices and Determinants -->
+  <button class="accordion">Matrices and Determinants</button>
+  <div class="panel">
+    <p>A matrix is a rectangular array of numbers. The determinant of a 2x2 matrix is calculated as:</p>
+    <p><strong>Matrix:</strong> <em>[[a, b], [c, d]]</em></p>
+    <p><strong>Determinant:</strong> <em>det = ad − bc</em></p>
+    <p><strong>Example:</strong> For the matrix <em>[[2, 3], [4, 5]]:</em></p>
+    <p><strong>det = (2)(5) − (3)(4) = 10 − 12 = −2</strong></p>
+  </div>
+
+  <!-- Section: Polynomial Division -->
+  <button class="accordion">Polynomial Division</button>
+  <div class="panel">
+    <p>Polynomial long division is used to divide one polynomial by another. For example:</p>
+    <p>Divide <em>x³ + 2x² − x − 2</em> by <em>x − 1:</em></p>
+    <p><strong>Solution:</strong></p>
+    <p><strong>Step 1:</strong> Divide the first term of the dividend by the first term of the divisor: <em>x³ ÷ x = x²</em>.</p>
+    <p><strong>Step 2:</strong> Multiply the entire divisor by <em>x²</em>: <em>x²(x − 1) = x³ − x²</em>.</p>
+    <p><strong>Step 3:</strong> Subtract: <em>(x³ + 2x²) − (x³ − x²) = 3x²</em>.</p>
+    <p><strong>Step 4:</strong> Repeat for all terms. The result is:</p>
+    <p><strong>Quotient:</strong> <em>x² + 3x + 2</em>, <strong>Remainder:</strong> 0.</p>
+  </div>
+
+  <script>
+    // JavaScript for accordion functionality
+    const accordions = document.querySelectorAll('.accordion');
+    accordions.forEach(button => {
+      button.addEventListener('click', () => {
+        const panel = button.nextElementSibling;
+        panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+  </script>
+</body>
+</html>
